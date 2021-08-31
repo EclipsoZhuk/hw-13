@@ -46,6 +46,7 @@ async function onSearch(e) {
 
 // loadMore
 async function onLoadMore() {
+    
     state.page += 1;
     const pictures = await getPictures(state.value, state.page);
     refs.gallery.insertAdjacentHTML('beforeend', cardTmp(pictures));
